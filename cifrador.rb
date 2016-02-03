@@ -49,9 +49,3 @@ class Cifrador
 		msCrifrado
 	end
 end
-
-var =  Cifrador.new 'hola'
-mc = var.cifra 'jajajaaj+++++'
-msd = var.descifra mc
-
-puts msd
