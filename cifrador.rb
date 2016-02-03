@@ -10,7 +10,7 @@ class Cifrador
 		#Cifra cada letra del mensaje
 		ms.length.times do |e|
 			#Mantiene los caranteres especiales
-			if (ms[e] == '+' and ms[e] == '/')
+			if ms[e] == '+' or ms[e] == '/'
 				msCrifrado = msCrifrado + ms[e]
 			else
 				aux = @background.search ms[e]
@@ -32,7 +32,7 @@ class Cifrador
 		#Cifra cada letra del mensaje
 		ms.length.times do |e|
 			#Mantiene los caranteres especiales
-			if (ms[e] == '+' and ms[e] == '/')
+			if ms[e] == '+' or ms[e] == '/'
 				msCrifrado = msCrifrado + ms[e]
 			else
 				aux = @background.search ms[e]
@@ -50,9 +50,8 @@ class Cifrador
 	end
 end
 
-var = Cifrador.new 'holay'
-mc = var.cifra 'comohasesatdomibuenamigo'
-mds = var.descifra mc
+var =  Cifrador.new 'hola'
+mc = var.cifra 'jajajaaj+++++'
+msd = var.descifra mc
 
-puts mc
-puts mds
+puts msd
