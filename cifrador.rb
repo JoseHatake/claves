@@ -10,13 +10,9 @@ class Cifrador
 		#Cifra cada letra del mensaje
 		ms.length.times do |e|
 			#Mantiene los caranteres especiales
-			if ms[e] == '+' or ms[e] == '/'
-				msCrifrado = msCrifrado + ms[e]
-			else
-				aux = @background.search ms[e]
-				aux2 = @background.search @password[count]
-				msCrifrado = msCrifrado + (@background.confirm (aux+aux2)).to_s
-			end
+			aux = @background.search ms[e]
+			aux2 = @background.search @password[count]
+			msCrifrado = msCrifrado + (@background.confirm (aux+aux2)).to_s
 			#Contador para la posisción del pass
 			if (count+1) == @password.length
 				count = 0
@@ -32,13 +28,9 @@ class Cifrador
 		#Cifra cada letra del mensaje
 		ms.length.times do |e|
 			#Mantiene los caranteres especiales
-			if ms[e] == '+' or ms[e] == '/'
-				msCrifrado = msCrifrado + ms[e]
-			else
-				aux = @background.search ms[e]
-				aux2 = @background.search @password[count]
-				msCrifrado = msCrifrado + (@background.confirm (aux-aux2)).to_s
-			end
+			aux = @background.search ms[e]
+			aux2 = @background.search @password[count]
+			msCrifrado = msCrifrado + (@background.confirm (aux-aux2)).to_s
 			#Contador para la posisción del pass
 			if (count+1) == @password.length
 				count = 0
