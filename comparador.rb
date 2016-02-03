@@ -26,10 +26,10 @@ class Comparador
 		var
 	end
 	def confirm num
-		if num > 61
-			num = num - 61
+		if num > (@newVar.length-1)
+			num = num - (@newVar.length-1)
 		elsif num < 0
-			num = 61 + num
+			num = (@newVar.length-1) + num
 		end
 		@newVar[num]
 	end
