@@ -16,6 +16,8 @@ class Comparador
 		@newVar.push var0[count]
 		@newVar.push '+'
 		@newVar.push '/'
+		@newVar.push '.'
+		@newVar
 	end
 	def search letter
 		var = 0

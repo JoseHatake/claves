@@ -9,7 +9,7 @@ class Cifrador
 		count = 0
 		#Cifra cada letra del mensaje
 		ms.length.times do |e|
-			#Mantiene los caranteres especiales
+			#Busca el caracter cifrado con el comparadfor y la clave dada
 			aux = @background.search ms[e]
 			aux2 = @background.search @password[count]
 			msCrifrado = msCrifrado + (@background.confirm (aux+aux2)).to_s
@@ -27,7 +27,7 @@ class Cifrador
 		count = 0
 		#Cifra cada letra del mensaje
 		ms.length.times do |e|
-			#Mantiene los caranteres especiales
+			#Busca el caracter cifrado con el comparadfor y la clave dada
 			aux = @background.search ms[e]
 			aux2 = @background.search @password[count]
 			msCrifrado = msCrifrado + (@background.confirm (aux-aux2)).to_s
